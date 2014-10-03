@@ -5,8 +5,21 @@
     <string name="valor">Valor:</string>
     <string name="action_settings">Settings</string>
     <string name="converter">Converter</string>
-	
+
     <!-- Strings spinner moeda -->
-    
-    
+
+    <string-array name="array_moedas">
+        <item>AED</item>
+        <item>AFN</item>
+        <item>ALL</item>
+        <item>AMD</item>
+        <item>ANG</item>
+        <item>AOA</item>
+        <item>ARS</item>
+        <item>A$</item>
+        <item>AWG</item>
+        <item>AZN</item>
+        <item>BAM</item>
+    </string-array>
+
 </resources>
