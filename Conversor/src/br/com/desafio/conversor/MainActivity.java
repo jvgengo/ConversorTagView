@@ -115,14 +115,14 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 					valorConvertido = (Double) valorJSon.get("v");
 
 				} catch (MalformedURLException e) {
-					Log.d("URL", "MalformedURLException");
+					Log.e("ERRO", "MalformedURLException");
 
 					e.printStackTrace();
 				} catch (IOException e) {
-					Log.d("URL", "IOException");
+					Log.e("ERRO", "IOException");
 					e.printStackTrace();
 				} catch (JSONException e) {
-					Log.d("URL", "JSONException");
+					Log.e("ERRO", "JSONException");
 
 					e.printStackTrace();
 				}
