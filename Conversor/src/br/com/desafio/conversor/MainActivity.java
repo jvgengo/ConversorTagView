@@ -41,8 +41,6 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-		
 		spMoeda = (Spinner) findViewById(R.id.spinner_moedas);
 		
 		adapter = ArrayAdapter.createFromResource(this, R.array.array_moedas, android.R.layout.simple_list_item_1);
@@ -90,12 +88,11 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	 */
 	private void processarConversao(int valorParaConversao) {
 		
-		setProgressBarIndeterminateVisibility(true);
-		
 		new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
+				
 				int valorConvertido = 0;
 				try {
 					URL urlRateExchange = new URL("");
@@ -136,8 +133,6 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 						
 						txtValorConvertido.setText(novoTextoValorConvertido);
 						btnConverter.setEnabled(true);
-						
-						setProgressBarIndeterminateVisibility(false);
 						
 					}
 				});
