@@ -9,6 +9,8 @@
     <!-- Strings spinner moeda -->
 
     <string-array name="array_moedas">
+        <item>USD</item>
+        <item>EUR</item>
         <item>AED</item>
         <item>AFN</item>
         <item>ALL</item>
