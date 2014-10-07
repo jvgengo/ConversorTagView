@@ -2,6 +2,7 @@ package br.com.desafio.conversor;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.DecimalFormat;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -113,7 +114,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 					JSONObject valorJSon = new JSONObject(json);
 
 					valorConvertido = (Double) valorJSon.get("v");
-
+					
 				} catch (MalformedURLException e) {
 					Log.e("ERRO", "MalformedURLException");
 
@@ -127,14 +128,16 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 					e.printStackTrace();
 				}
 
-				final String novoTextoValorConvertido = valorConvertido + "";
+				DecimalFormat formatacaoDuasCasas = new DecimalFormat("0.00"); 
+
+				final String novoTextoValorConvertido = formatacaoDuasCasas.format(valorConvertido);
 
 				handlerAlteraValorConvertido.post(new Runnable() {
 
 					@Override
 					public void run() {
-
-						txtValorConvertido.setText(novoTextoValorConvertido);
+						
+						txtValorConvertido.setText(novoTextoValorConvertido + " reais");
 						btnConverter.setEnabled(true);
 
 					}
