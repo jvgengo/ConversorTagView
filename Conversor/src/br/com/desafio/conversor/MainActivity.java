@@ -153,7 +153,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		StringBuilder sURL = new StringBuilder();
 
 		sURL.append("http://rate-exchange.appspot.com/currency?from=")
-				.append(MOEDA_BRASIL).append("&to=").append(paisMoedaConversao)
+				.append(paisMoedaConversao).append("&to=").append(MOEDA_BRASIL)
 				.append("&q=").append(valor);
 
 		return sURL.toString();
